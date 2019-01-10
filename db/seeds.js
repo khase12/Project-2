@@ -9,8 +9,11 @@ return parties.create ({
     date: "01/28/19",
     location: "4098 ohara dr forest park Ga Atlanta",
     type: "house party",
-    Description :"Free Until Midnight!!!" 
-}).then((parties)
+    Description:"Free Until Midnight!!!",
+    images:""
+}).then(() =>{
+
+}
 
 )
 

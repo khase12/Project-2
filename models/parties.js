@@ -1,3 +1,4 @@
+const mongoose =require("../db/connection")
 const Schema = mongoose.Schema
 
 const parties = new Schema({
@@ -5,5 +6,7 @@ const parties = new Schema({
     date: Number,
     location: String,
     type: String,
-    Description : String,
+    Description: String,
+    images: String
 });
+module.exports =mongoose.model("parties",parties)

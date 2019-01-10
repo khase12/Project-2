@@ -1,3 +1,4 @@
+const mongoose =require("../db/connection")
 const Schema = mongoose.Schema
 
 const user= new Schema({
@@ -6,3 +7,4 @@ const user= new Schema({
     image: String,
    
 });
+module.exports =mongoose.model("user",user)
