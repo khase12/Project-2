@@ -2,7 +2,7 @@ const mongoose =require("../db/connection")
 const Schema = mongoose.Schema
 
 const Parties = new Schema({
-   time: Number,
+   title: String,
     date: String,
     location: String,
     description: String,

@@ -11,8 +11,9 @@ Parties = require ("../models/Parties")
          res.render("app/new")
      },
      create: (req,res) => {
+
          Parties.create({
-             time: req.body.time,
+             title: req.body.title,
              date: req.body.date,
              location: req.body.location,
              description:req.body.description ,

@@ -18,9 +18,3 @@ router.delete('/:id', partiesController.delete)
 
 module.exports = router
 
-// router.get('/:id/reviews', reviewsController.index)
-// router.get('/:id/comments/new', reviewsController.new)
-// router.post('/:id/comments', reviewsController.create)
-// router.get('/:id/comments/:commentId', reviewsController.show)
-// router.get('/:id/comments/:commentId/edit', reviewsController.edit)
-// router.patch('/:id/comments/:commentId', reviewsController.update)

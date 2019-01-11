@@ -5,7 +5,7 @@ const User=  require ("../models/User")
 Parties.deleteMany({})
 .then(() => {
 return Parties.create ({
-    time: "10:00",
+   title: "Ballroom party",
     date: "01/28/19",
     location: "4000 Ohara Dr, Forest Park, Atlanta, GA",
     type: "ballroom",
@@ -14,7 +14,7 @@ return Parties.create ({
 },
 
 {
-    time: "9:30",
+   title: "Underground Party",
     date: "07/03/19",
     location: "300 Party Blvd",
     type: "underground",
@@ -23,16 +23,14 @@ return Parties.create ({
 
 },
 {
-    time: "6:00",
+   title: "Rooftop Party",
     date: "01/28/19",
     location: "720 Party Blvd",
     type: "rooftop",
     Description:"Rooftop party in one of the nicest areas in Atlanta",
     images:"https://media.timeout.com/images/103894603/image.jpg"
-}).then(here => {
-    const party = Party.create({
+
 
     })
 })
 
-})

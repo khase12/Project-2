@@ -4,10 +4,10 @@ const Schema = mongoose.Schema
 const Reviews = new Schema({
     name: String,
     rating: Number,
-    author: String,
+    review: String,
     reviews: [{
         type: Schema.Types.ObjectId,
-        ref: "parties"
+        ref: "Parties"
     }]
   
 });

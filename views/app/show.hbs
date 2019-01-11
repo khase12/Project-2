@@ -1,8 +1,42 @@
-<h1>Leave your reviwes or edit a previous review here! </h1>
+<h3>Leave your reviwes or edit a previous review here! </h3>
 
-    <form action="/{{products._id}}?_method=DELETE" method="POST">
-    <a href="/{{products._id}}/edit"><button class="btn uk-button uk-button-default" type="submit">Edit Event</button>
-    </a>
+	<form action="/{{parties._id}}?_method=DELETE" method="POST">
+    <button class="btn uk-button uk-button-default" type="submit">Delete Product</button>
+	</form>
+
+<a  class="btn uk-button uk-button-default"  href="/{{parties._id}}/edit">Edit Product
+</a>
+
+
+<body>
     
-    <button class="btn uk-button uk-button-default" type="submit">Delete Event</button>
+    <div style="margin: 15px auto; width: 45vw; height:60vh;">
+    <form action="/" method="POST">
+        <div class="field">
+            <label class="label">Feedback: </label>
+            <div class="control">
+            <input class="input" type="text" name="name" placeholder="John Smith">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Review</label>
+            <div class="control">
+            <input class="input" name="review" type="text" placeholder="Wow! Amazing party!">
+            </div>
+        </div>
+
+        <div class="feedback">
+            <label class="label">Rating</label>
+            <div class="control">
+            <input class="input"  name="rating" type="text" placeholder="5">
+            </div>
+        </div>
+        </div>
+        <button class="button is-success" type="submit">Submit Review</button>
     </form>
+</div>
+
+</body>
+</html>
+
