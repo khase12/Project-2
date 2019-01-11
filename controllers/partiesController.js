@@ -13,7 +13,7 @@ Parties = require ("../models/Parties")
      create: (req,res) => {
 
          Parties.create({
-             title: req.body.title,
+             title: req.body.tite,
              date: req.body.date,
              location: req.body.location,
              description:req.body.description ,
