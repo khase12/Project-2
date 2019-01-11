@@ -11,12 +11,12 @@ Parties = require ("../models/Parties")
          res.render("app/new")
      },
      create: (req,res) => {
-         console.log(req.body)
          Parties.create({
-             parties: req.body.product,
-             description: req.body.description,
-             image: req.body.image,
-             postDate: req.body.postDate,
+             time: req.body.time,
+             date: req.body.date,
+             location: req.body.location,
+             description:req.body.description ,
+             images: req.body.images,
            
          }).then(parties => {
              res.redirect("/")

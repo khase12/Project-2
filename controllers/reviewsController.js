@@ -1,31 +1,10 @@
-
-// const partiesController ={
-
-// index: (req, res) => {
-//     res.send('home/parties')
-// },
-// view: (req, res) => {
-//     res.send('view/parties')
-// },
-// create: (req, res) => {
-//     res.send('create/parties')
-// },
-// update: (req, res) => {
-//     res.send('update/parties')
-// },
-// delete: (req, res) => {
-//     res.send('delete/parties')
-// }
-// }
-// module.exports = partiesController
-
 const Reviews = require ("../models/Reviews")
 
 
 const reviewsController = {
     index: (req,res) => {
-       Parties.find({}).then((reviews) => {
-            res.render('reviews/forms', {reviews})
+       Parties.find({}).then((Reviews) => {
+            res.render('Reviews/forms', {Reviews})
        })
        
     },
@@ -35,20 +14,19 @@ const reviewsController = {
     create: (req,res) => {
         console.log(req.body)
         Parties.create({
-            parties: req.body.product,
-            description: req.body.description,
-            image: req.body.image,
-            postDate: req.body.postDate,
+            name: req.body.name,
+            rating: req.body.rating,
+            author: req.body.author,
           
-        }).then(parties => {
+        }).then(Parties => {
             res.redirect("/")
         })
     },
     show: (req,res) => {
         const partiesId = req.params.id 
-        Parties.findById(partiesId).then((parties) => {
-            console.log(parties)
-            res.render("app/show", {parties})
+        Parties.findById(partiesId).then((Parties) => {
+            console.log(Parties)
+            res.render("app/show", {Parties})
         })
     },
 }
