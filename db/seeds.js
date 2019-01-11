@@ -1,22 +1,38 @@
-const parties = require("../models/Parties")
-const reviews = require ("../models/Reviews")
-const user= require ("../models/User")
+const Parties = require("../models/Parties")
+const Reviews = require ("../models/Reviews")
+const User=  require ("../models/User")
 
-parties.deleteMany({})
+Parties.deleteMany({})
 .then(() => {
-return parties.create ({
-    time: "7:30",
+return Parties.create ({
+    time: "10:00",
     date: "01/28/19",
-    location: "4098 ohara dr forest park Ga Atlanta",
-    type: "house party",
-    Description:"Free Until Midnight!!!",
-    images:""
-}).then(() =>{
-
+    location: "4000 Ohara Dr, Forest Park, Atlanta, GA",
+    type: "ballroom",
+    Description:"White tie affair for family and friends",
+    images:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-J4iAH04jMjrcy4Czl3fQtX4l2l61q47UmBRhoNAaDcbL6ELL"
 },
 
-)
+{
+    time: "9:30",
+    date: "07/03/19",
+    location: "300 Party Blvd",
+    type: "underground",
+    Description:"Foam party for all humans 18+",
+    images:"https://media.phillyvoice.com/media/images/Daybreaker.2e16d0ba.fill-735x490.2e16d0ba.fill-735x490.png"
 
+},
+{
+    time: "6:00",
+    date: "01/28/19",
+    location: "720 Party Blvd",
+    type: "rooftop",
+    Description:"Rooftop party in one of the nicest areas in Atlanta",
+    images:"https://media.timeout.com/images/103894603/image.jpg"
+}).then(here => {
+    const party = Party.create({
 
+    })
+})
 
 })

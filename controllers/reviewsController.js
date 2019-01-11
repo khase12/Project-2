@@ -1,4 +1,3 @@
-// const parties = require("../models/Parties")
 
 // const partiesController ={
 
@@ -20,7 +19,6 @@
 // }
 // module.exports = partiesController
 
-const reviews = require ("../models/Products")
 const Reviews = require ("../models/Reviews")
 
 

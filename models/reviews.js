@@ -1,10 +1,10 @@
-const mongoose =require("../db/connection")
+const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
 
 const Reviews = new Schema({
     name: String,
     rating: Number,
-    author: String.apply,
+    author: String,
     reviews: [{
         type: Schema.Types.ObjectId,
         ref: "parties"

@@ -49,4 +49,3 @@ Parties = require ("../models/Parties")
  }
  
  module.exports = partiesController
- 
