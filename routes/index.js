@@ -1,10 +1,24 @@
 const express = require('express')
 const router = express.Router()
-const partiesController = require('../controllers/appController')
+const partiesController = require('../Controllers/partiesController')
+const reviewsController = require('../Controller/reviewsController')
 
 
 router.get('/', partiesController.index)
-router.get('/view', partiesController.view)
 router.post('/create', partiesController.create)
-router.patch('/update', partiesController.update)
-router.delete('/delete', partiesController.delete)
+router.get('new', partiesController.new)
+router.get('/:id', partiesController.show)
+
+router.get('/:id/review', reviewsController.index)
+
+router.get("/:id/edit", partiesController.edit)
+router.patch('/:id', partiesController.update)
+router.delete('/:id', partiesController.delete)
+
+
+// router.get('/:id/reviews', reviewsController.index)
+// router.get('/:id/comments/new', reviewsController.new)
+// router.post('/:id/comments', reviewsController.create)
+// router.get('/:id/comments/:commentId', reviewsController.show)
+// router.get('/:id/comments/:commentId/edit', reviewsController.edit)
+// router.patch('/:id/comments/:commentId', reviewsController.update)

@@ -1,12 +1,15 @@
 const mongoose =require("../db/connection")
 const Schema = mongoose.Schema
 
-const parties = new Schema({
+const Parties = new Schema({
    time: Number,
-    date: Number,
+    date: String,
     location: String,
-    type: String,
-    Description: String,
-    images: String
+    description: String,
+    images: String,
+    comments: [{
+        type: Schema.Types.ObjectId,
+        ref: "Reviews"
+    }]
 });
-module.exports =mongoose.model("parties",parties)
+module.exports = mongoose.model("Parties", Parties)

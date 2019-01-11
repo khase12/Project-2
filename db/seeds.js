@@ -1,6 +1,6 @@
-const parties = require("../models/parties")
-const reviews = require ("../models/reviews")
-const user= require ("../models/user")
+const parties = require("../models/Parties")
+const reviews = require ("../models/Reviews")
+const user= require ("../models/User")
 
 parties.deleteMany({})
 .then(() => {
@@ -13,7 +13,7 @@ return parties.create ({
     images:""
 }).then(() =>{
 
-}
+},
 
 )
 

@@ -1,10 +1,14 @@
 const mongoose =require("../db/connection")
 const Schema = mongoose.Schema
 
-const reviews = new Schema({
-    title: "Best Party Ever",
-    author: "Bill",
-    comment: "The food was great"
+const Reviews = new Schema({
+    name: String,
+    rating: Number,
+    author: String.apply,
+    reviews: [{
+        type: Schema.Types.ObjectId,
+        ref: "parties"
+    }]
   
 });
-module.exports = mongoose.model("reviews", reviews)
+module.exports = mongoose.model("Reviews", Reviews)

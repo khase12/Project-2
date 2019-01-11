@@ -1,0 +1,26 @@
+<body>
+
+<div class="container">
+<div style="text-align: center; margin: 25px;">
+ 
+  {{#each parties}}
+​
+   <div class="tile is-parent">
+    <article class="tile is-child notification">
+
+      <a href="{{_id}}"><p class="title"> {{product}}</p></a>
+
+      <p class="subtitle">{{description}}</p>
+
+      <p class="subtitle">{{postDate}}</p>
+      <a href="/{{_id}}/review"><button class="btn">Review</button></a>
+     
+     <figure class="image is-4by3">
+      <img src="{{{image}}}" alt="">
+     </figure>
+    </article>
+   </div>
+​
+
+  {{/each}}
+</body>

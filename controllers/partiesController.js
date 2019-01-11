@@ -1,22 +1,52 @@
-const parties = require("../models/parties")
+Parties = require ("../models/Parties")
 
-const partiesController ={
-
-index: (req, res) => {
-    res.send('home/parties')
-},
-view: (req, res) => {
-    res.send('view/parties')
-},
-create: (req, res) => {
-    res.send('create/parties')
-},
-update: (req, res) => {
-    res.send('update/parties')
-},
-delete: (req, res) => {
-    res.send('delete/parties')
-}
-}
-​
-module.exports = partiesController
+ let partiesController = {
+     index: (req,res) => {
+         Parties.find({}).then((parties) => {
+             console.log(parties)
+             res.render("app/index", {parties})
+         })
+     },
+     new: (req,res) => {
+         res.render("app/new")
+     },
+     create: (req,res) => {
+         console.log(req.body)
+         Parties.create({
+             parties: req.body.product,
+             description: req.body.description,
+             image: req.body.image,
+             postDate: req.body.postDate,
+           
+         }).then(parties => {
+             res.redirect("/")
+         })
+     },
+     show: (req,res) => {
+         const partiesId = req.params.id 
+         Parties.findById(partiesId).then((parties) => {
+             console.log(parties)
+             res.render("app/show", {parties})
+         })
+     },
+     edit: (req,res) => {
+         const parties = req.params.id 
+         res.render("app/edit", {parties})
+     },
+     update: (req,res) => {
+         const partiesId = req.params.id 
+         console.log(req.body) 
+         Parties.findByIdAndUpdate(partiesId, req.body, {new:true}).then((parties) => {
+             res.redirect("/")
+         })
+     },
+     delete: (req,res) => {
+         const partiesId = req.params.id
+         Parties.findByIdAndRemove(partiesId).then(() => {
+             res.redirect("/")
+         })
+     }
+ }
+ 
+ module.exports = partiesController
+ 
