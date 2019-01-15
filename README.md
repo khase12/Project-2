@@ -11,12 +11,12 @@
  MongoDb
 
  #Wire Frame
-
+![wireframe](/images/wireframe.jpg)
 #Trello
 https://trello.com/b/7MXbjXN0/whats-the-move
 
 #Erd
-
+![erd](/images/erd.jpg)
 
 
 #Version 2
